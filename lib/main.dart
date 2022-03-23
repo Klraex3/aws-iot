@@ -42,10 +42,8 @@ Future<int> main() async {
   // Note that for Flutter users the parameters above can be set in byte format rather than file paths
   final context = SecurityContext.defaultContext;
   context.setClientAuthorities('/assets/certs/AmazonRootCA1.pem');
-  context.useCertificateChain(
-      '/home/hs/Desktop/mqtt aws/flutter_application_1/assets/certs/certificate.pem.crt');
-  context.usePrivateKey(
-      '/home/hs/Desktop/mqtt aws/flutter_application_1/assets/certs/private.pem.key');
+  context.useCertificateChain('/assets/certs/certificate.pem.crt');
+  context.usePrivateKey('/assets/certs/private.pem.key');
   client.securityContext = context;
 
   // Setup the connection Message
